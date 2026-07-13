@@ -33,9 +33,41 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_new_project:
+  #my_new_project:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    #example:
+     # +materialized: table
 flags:
   require_generic_test_arguments_property: true
+
+vars:
+  asp_region_name: "asp"
+  is_region_active: 'true'
+  dbt_date:
+    time_zone: 'America/Los_Angeles'
+  num_id: 12345
+  range_a:
+    ranges: [['1', '100']]
+  range_b:
+    ranges: [['1', '100'], ['101', '200']]
+  listed_a:
+    lists: ['10']
+  listed_b:
+    lists: ['1', '2', '3']
+  s_exp_list:
+    - 'a'
+    - 'b'
+  like_exp_list:
+    - 'b%'
+  
+  Year: 'year(current_date)'
+
+  seeds:
+    dbt_practice:
+      +full_refresh : false
+      +database : 'env_var{{"DBT_RAW_DB"}}'
+      +schema : 'env_var{{"DBT_RAW_SCH"}}'
+
+  
+  
+  

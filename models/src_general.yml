@@ -1,0 +1,8 @@
+version: 1
+sources:
+  - name: SRC_DBT_RAW
+    database: dbt_sql
+    schema: raw
+    tables:
+      - name : customer_raw
+      
