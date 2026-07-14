@@ -1,8 +1,8 @@
 {% snapshot orders_snapshot %}
 
-{{
-    config(
+{{ config(
         strategy='timestamp',
+        target_schema='raw',
         unique_key='o_orderkey',
         updated_at='etl_last_updated_date'
     )

@@ -2,16 +2,7 @@ snapshots:
   - name: orders_snapshot
     relation: source('SRC_DBT_RAW', 'orders')
     config:
-        database: DBT_SQL
-        schema: RAW
-        unique_key: o_orderkey
-        strategy: timestamp
-        updated_at: etl_last_updated_date
-      
-      
-      
-
-
-    #   snapshots:
-    # - name: orders_snapshot
-    #   relation: ref('ephemeral_orders')
+      schema: raw
+      unique_key: o_orderkey
+      strategy: timestamp
+      updated_at: etl_last_updated_date
