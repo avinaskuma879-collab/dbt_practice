@@ -1,8 +1,9 @@
-snapshots:
-  - name: orders_snapshot
-    relation: source('SRC_DBT_RAW', 'orders')
-    config:
-      schema: raw
-      unique_key: o_orderkey
-      strategy: timestamp
-      updated_at: etl_last_updated_date
+# version: 2
+# snapshots:
+#   - name: orders_snapshot
+#     relation: source('SRC_DBT_RAW', 'orders')
+#     config:
+#       schema: raw
+#       unique_key: o_orderkey
+#       strategy: timestamp
+#       updated_at: etl_last_updated_date

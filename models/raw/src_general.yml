@@ -6,5 +6,6 @@ sources:
     tables:
       - name : customer_raw
       - name : orders
+      - name : pnl
           
       
