@@ -5,7 +5,8 @@
 
     materialized='incremental',
    unique_key=['fdmee_account'],
-   incremental_strategy='delete+insert'
+   incremental_strategy='delete+insert',
+   tags=['mat_inc']
 ) 
 }}
 with mat_inc as (

@@ -2,10 +2,12 @@
  {# unique_key=['fdmee_account','pnl_flag'] #} 
 {{ 
     config(
-
+    pre_hook='select count(*) from ' ~ this,
+    post_hook='select count(*) from ' ~ this,
     materialized='incremental',
-   unique_key=['fdmee_account'],
-   incremental_strategy='merge'
+    unique_key=['fdmee_account'],
+    incremental_strategy='merge',
+    tags=['mat_inc']
 ) 
 }}
 with mat_inc as (
