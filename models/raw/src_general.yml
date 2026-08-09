@@ -5,4 +5,8 @@ sources:
     schema: raw
     tables:
       - name : customer_raw
+      - name : orders
+      - name : pnl
+      - name : raw_orders
+          
       

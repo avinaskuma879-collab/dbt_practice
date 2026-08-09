@@ -1,0 +1,1 @@
+select * from dbt_sql.raw.customer_raw limit 10
